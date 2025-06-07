@@ -10,8 +10,20 @@
     <div class="container">
         <h1>💘 Ruthe & Jeffeson 💘</h1>
         <p>Meu amor, desde <strong>07/10/2023</strong></p>
-        <p>Olha quanto tempo! Nós estamos juntos há:</p>
-        <h2>{{ dias }} dias!</h2>
+        <p>Olha quanto tempo! Nós estamos juntos há:</p>    
+        <script>
+            const dataInicio = new Date(2023, 9, 7); // Outubro é mês 9 (0-indexado)
+            const hoje = new Date();
+    
+            const diffEmMilissegundos = hoje - dataInicio;
+            const diasPassados = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
+    
+            const dataFormatada = dataInicio.toLocaleDateString('pt-BR');
+    
+            document.getElementById('data-inicio').textContent = dataFormatada;
+            document.getElementById('dias-passados').textContent = diasPassados;
+        </script>
+        <h2>id="dias-passados" dias!</h2>
         <p>🌹 Nós começamos essa aventura já tem um tempo,
             havendo muitos momentos entre altos e baixos estamos sempre
             buscando nos conectar um com o outro e levar o nosso melhor.
