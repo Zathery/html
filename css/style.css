@@ -181,3 +181,52 @@ img {
 		transform: translateY(5%);
 	}
 }
+
+/* === ADIÇÕES PARA MOBILE === */
+
+@media (max-width: 499px) {
+	body {
+		flex-direction: column;
+		padding: 1rem;
+		height: auto;
+	}
+	.container {
+		max-width: 100%;
+		padding: 1rem;
+		box-shadow: none;
+	}
+	
+	.gallery {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		height: auto;
+	}
+
+	.gallery__strip__wrapper {
+		flex: 0 0 auto;
+		border-right: none;
+		margin-right: 10px;
+		min-height: auto;
+	}
+
+	.gallery__strip {
+		min-height: auto;
+	}
+
+	.photo__image img {
+		width: 150px;
+		transform: translateX(0);
+	}
+
+	.photo__name {
+		font-size: 18px;
+		-webkit-text-stroke-width: 0.5px;
+		margin-top: 0.2rem;
+	}
+
+	.photo {
+		text-align: center;
+		padding-bottom: 1rem;
+	}
+}
