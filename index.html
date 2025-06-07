@@ -112,16 +112,11 @@
         </div>       
     </section>
     <script>
-        const dataInicio = new Date(2023, 9, 7); // Outubro é mês 9 (0-indexado)
+        const dataInicio = new Date(2023, 9, 7);
         const hoje = new Date();
-    
-        const diffEmMilissegundos = hoje - dataInicio;
-        const diasPassados = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
-    
-        const dataFormatada = dataInicio.toLocaleDateString('pt-BR');
-    
-        document.getElementById('data-inicio').textContent = dataFormatada;
-        document.getElementById('dias-passados').textContent = diasPassados;
+        const diff = hoje - dataInicio;
+        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById('dias-passados').textContent = dias;
     </script>
 </body>
 </html>
